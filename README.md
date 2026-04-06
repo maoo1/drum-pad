@@ -43,7 +43,7 @@ A quiet, portable, and responsive electronic Lion Dance drum designed for practi
 4.  Solder jumper wires from the copper tape to the corresponding ESP32 GPIO pins.
 5.  **Note on Grounding:** Keep the ESP32 plugged into your laptop via USB. The cable acts as a ground plane, which is necessary for stable capacitive readings.
 
-This is what the drum should rouhgly look like - made to mimic a real lion dance drum. 
+This is what the drum should roughly look like - made to mimic a real lion dance drum. 
 ![copper-lion-dance-drum](https://github.com/user-attachments/assets/3f43aa65-70a7-469a-bbba-bab1ee8d64fe)
 
 This is what my wiring looked like in the back.
