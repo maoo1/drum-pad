@@ -38,10 +38,17 @@ A quiet, portable, and responsive electronic Lion Dance drum designed for practi
 
 ### 1. Hardware Assembly
 1.  Cut five pieces of copper tape.
-2.  Apply them to your cardboard structure. For the most authentic feel, place the "Rim" pads on the curved sides of the box.
-3.  Divide the center area into two distinct copper zones (Pad A and Pad B) to allow for the muting gesture.
+2.  Apply them to your cardboard structure. For the most authentic feel, place the "Rim" pads on the curved sides of the box. The rims were put together to the main drum via. hot glue. 
+3.  Divide the center area into two distinct copper zones (Pad A and Pad B) to allow for the muting gesture. This was done by divideding the center into two zones by having one big donut shaped cardboard and a smaller circular cardboard that fit in the middle. 
 4.  Solder jumper wires from the copper tape to the corresponding ESP32 GPIO pins.
 5.  **Note on Grounding:** Keep the ESP32 plugged into your laptop via USB. The cable acts as a ground plane, which is necessary for stable capacitive readings.
+
+This is what the drum should rouhgly look like - made to mimic a real lion dance drum. 
+![copper-lion-dance-drum](https://github.com/user-attachments/assets/3f43aa65-70a7-469a-bbba-bab1ee8d64fe)
+
+This is what my wiring looked like in the back.
+![back-setup](https://github.com/user-attachments/assets/f46fcb0c-8c7f-46d1-a594-26a68cc000c1)
+
 
 ### 2. ESP32 Firmware
 1.  Open the provided firmware file in your editor.
