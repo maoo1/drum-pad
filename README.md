@@ -2,11 +2,11 @@
 
 A quiet, portable, and responsive electronic Lion Dance drum designed for practice in noise-sensitive environments. This project uses the ESP32's internal capacitive touch sensors to detect strikes on a cardboard drum and triggers high-fidelity audio samples on a laptop via UDP over Wi-Fi.
 
-## Features
-*   **5-Zone Sensing:** Two center pads (for mute logic), two rim pads, and one mode-switch pad.
-*   **Mute Logic:** Imitates traditional drumming by triggering a "muted" sound when one center pad is held while the other is struck.
-*   **Dual Mode:** Toggle between "Drum" and "Cymbal" sound kits.
-*   **Adaptive Baseline Algorithm:** Automatically adjusts touch thresholds to account for environmental noise and grounding shifts.
+## Usage
+1.  **Center Hit:** Strike either Pad A or Pad B.
+2.  **Mute Hit:** Hold Pad A with one hand and strike Pad B with the other (or vice-versa).
+3.  **Rim Hit:** Strike the side pads.
+4.  **Change Instrument:** Tap the Mode pad to toggle between the Drum kit and the Cymbal kit.
 ---
 
 ## Hardware Requirements
@@ -47,24 +47,19 @@ A quiet, portable, and responsive electronic Lion Dance drum designed for practi
 1.  Open the provided firmware file in your editor.
 2.  Update the `laptopIP` variable to match your laptop's current IP address on the Wi-Fi network.
 3.  Upload the code to your ESP32.
-4.  Open the Serial Monitor (115200 baud) to ensure the device is connecting to the Wi-Fi Access Point and showing raw sensor values.
 
 ### 3. Laptop Receiver (Python)
-1.  Place your audio samples (`.wav` format) in the same directory as the Python script. Feel free to use the samples in the github repo, as they're from a real lion dance drum.
-2.  Ensure the filenames in the Python script match your recordings (e.g., `center.wav`, `rim.wav`, `mute.wav`).
-3.  Run the script:
+1. Install pygame.
+2.  Place your audio samples (`.wav` format) in the same directory as the Python script. Feel free to use the samples in the github repo, as they're from a real lion dance drum.
+3.  Ensure the filenames in the Python script match your recordings (e.g., `center.wav`, `rim.wav`, `mute.wav`).
+4.  Run the script for debugging. This will allow you to see the raw values, as well as the change in value upon touch:
     ```bash
     python listen.py
     ```
-
----
-
-## Usage
-1.  **Center Hit:** Strike either Pad A or Pad B.
-2.  **Mute Hit:** Hold Pad A with one hand and strike Pad B with the other (or vice-versa).
-3.  **Rim Hit:** Strike the side pads.
-4.  **Change Instrument:** Tap the Mode pad to toggle between the Drum kit and the Cymbal kit.
-
+5. Run the script for actual sound:
+   ```bash
+   python laptop_drum.py
+   ```
 ---
 
 ## Reproducibility Notes
